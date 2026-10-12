@@ -1,0 +1,147 @@
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+.header-paragraph {
+  font-size: 1rem;
+}
+
+.main-header {
+  display: grid;
+  grid-template-areas: 
+  "left_photo . right_photo"
+  ". main-text ."
+  ;
+}
+
+.main-text {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.btn-purple {
+  padding: 0.5em 3em;
+  border: none;
+  background-color: #855FB1;
+  color: #fff;
+  border-radius: 100px;
+}
+
+.btn-teal {
+  padding: 0.5em 3em;
+  border: none;
+  background-color: #4D96A9;
+  color: #fff;
+  border-radius: 100px;
+}
+
+.left_photo {
+  grid-area: left_photo;
+}
+
+.right_photo{
+  grid-area: right_photo;
+}
+
+.main-text {
+  grid-area: main-text;
+}
+
+.photos {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: 
+  "img1 img2"
+  "img3 img4"
+  ;
+  gap: 2em;
+}
+
+.photos .img1 {
+  grid-area: img1;
+}
+
+.photos .img1 {
+  grid-area: img2;
+}
+
+.photos .img1 {
+  grid-area: img3;
+}
+
+.photos .img1 {
+  grid-area: img4;
+}
+
+
+.cta {
+  text-align: center;
+}
+
+.cta p:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #4D96A9;
+}
+
+.cta p:nth-child(2) {
+  width: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(77, 150, 169, 0.5), rgba(77, 150, 169, 0.5)), url("./starter-code/assets/desktop/image-footer.jpg");
+  background-color: #4D96A9;
+  color: #fff;
+}
+
+
+footer button {
+ padding: 0.5em 3em;
+  border: none;
+  background-color: #855FB1;
+  color: #fff;
+  border-radius: 100px;
+}
+
+@media (min-width: 60em) {
+  .main-header {
+  display: grid;
+  grid-template-areas: 
+  "left_photo main-text right_photo"
+  ;
+}
+
+.photos {
+  grid-template-areas: 
+  "img1 img2 img3 img4"
+  ;
+}
+
+.buttons {
+  flex-direction: row;
+}
+
+footer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+}
